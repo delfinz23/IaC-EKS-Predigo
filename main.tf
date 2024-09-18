@@ -3,14 +3,12 @@ provider "aws" {
 }
 
 locals {
-  name            = "ex-${replace(basename(path.cwd), "_", "-")}"
-  cluster_version = "1.21"
+  name            =  "predigo-cluster"
+  cluster_version = "1.0"
   region          = "eu-east-2"
 
   tags = {
     Example    = local.name
-    GithubRepo = "terraform-aws-eks"
-    GithubOrg  = "terraform-aws-modules"
   }
 }
 
